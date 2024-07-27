@@ -1,5 +1,14 @@
 # PPPwnUI
-PPPwnUI is a program made in Python that adds an UI to the exploit [PPPwn](https://github.com/TheOfficialFloW/PPPwn/) created by [TheFlow](https://github.com/TheOfficialFloW/).
+PPPwnUI is a Python/TK GUI for installing the GoldHen homebrew tool for the PS4 [PPPwn](https://github.com/TheOfficialFloW/PPPwn/) created by [TheFlow](https://github.com/TheOfficialFloW/).
+
+goldhen enables you to install homebrew PS4 software onto the PS4's hard drive and copy files to and from it via FTP amongst other handy features.
+
+## Hardware requirements
+
+PPPwn UI requires an ethernet port and cable to connect your computer to the PS4.
+
+You must be running PS4 firmware v11.00. Unfortunately this exploit does not curently work under later firmware revisions.
+
 
 ## Installation :
 
@@ -11,9 +20,23 @@ git clone https://github.com/B-Dem/PPPwnUI
 
 - Install the requirements:
 
+Under Debian and Ubuntu based Linux distros run:
+
 ```sh
-pip install -r requirements.txt
+sudo apt install python3-scapy python3-tk
 ```
+
+# Network configuration
+
+Your ethernet port must be configured to use the **shared to other computers** method before you run PPPwnUI.
+
+You can configure this under Linux using the NetworkManager GUI by opening your wired connection's settings window, switch to the **IPv4 settings** tab then click the **Method** drop down menu and change the **Method** confguration option to use **shared to other computers**.
+
+## Copy goldhen.bin to a USB disk
+
+On your computer:
+
+- Copy `goldhen.bin` from the **USB Drive (GoldHEN_vX.XXX)** directory of this repo to the root directory of an exfat/fat32 USB and insert it into your PS4.
 
 ## Usage :
 
@@ -26,16 +49,12 @@ pip install -r requirements.txt
   **Linux :**
 
   ```sh
-  chmod +x PPPwnUI.sh
+  sudo python3 PPPwnUI.py
   ```
 
-  Then :
-  
-  ```sh
-  ./PPPwnUI.sh
-  ```
+**PPPwnUI must be run either using sudo or as the root user**
 
-- Select your Interface using the drop-down menu
+- Select your Interface using the drop-down menu. Under Linux this will usually be eth0.
 
 - Choose Between the Exploit Version you want to use ([PPPwn Python](https://github.com/TheOfficialFloW/PPPwn), [PPPwn_Go](https://github.com/BestPig/PPPwn_go))
 
@@ -55,25 +74,20 @@ pip install -r requirements.txt
 - Then click on **Start PPPwn** to start the Exploit.
 
 
-## PPPwn Usage :
+## Connecting to PPPwn from your PS4
 
-On your PS4:
+After configuring your ethernet interface, copying goldhen.bin onto USB, connecting an ethernet cable to your PS4 and starting PPPwn you do the following on your PS4:
 
-- Go to `Settings` and then `Network`
-- Select `Set Up Internet connection` and choose `Use a LAN Cable`
-- Choose `Custom` setup and choose `PPPoE` for `IP Address Settings`
-- Enter anything for `PPPoE User ID` and `PPPoE Pasword`
-- Choose `Automatic` for `DNS Settings` and `MTU Settings`
-- Choose `Do Not Use` for `Proxy Server`
-- Click `Test Internet Connection` to communicate with your computer
+- Go to **Settings**` and then **Network**
+- Select **Set Up Internet connection** and choose **Use a LAN Cable**
+- Choose **Custom setup** and choose **PPPoE** for **IP Address Settings**
+- Enter anything for **PPPoE User ID** and **PPPoE Pasword**
+- Choose **Automatic** for **DNS Settings** and **MTU Settings**
+- Choose **Do Not Use** for **Proxy Server**
+- Click **Test Internet Connection** to connect to PPwnUI
 
 If the exploit fails or the PS4 crashes, you can skip the internet setup and simply click on `Test Internet Connection`. If the script fail or is stuck waiting for a request/response, abort it and run it again on your computer, and then click on `Test Internet Connection` on your PS4.
 
-## Goldhen Usage :
-
-On your Computer: 
-
-- Copy `goldhen.bin` to the root directory of an exfat/fat32 USB and insert it into your PS4.
 
 ## Example run : 
 
@@ -168,6 +182,4 @@ On your Computer:
 
 This Program was originally made with ❤️ by [Memz](https://github.com/B-Dem) for [Sighya](https://sighya.fr).
 
-If you find this program helpful, leave a star on the repo!
-
-And if you got any feedback, open an issues !
+If you find this program helpful please star the repo and open an issue if you find any bugs.
