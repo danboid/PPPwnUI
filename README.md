@@ -26,7 +26,7 @@ Under Debian and Ubuntu based Linux distros run:
 sudo apt install python3-scapy python3-tk
 ```
 
-# Network configuration
+## Network configuration
 
 Your ethernet port must be configured to use the **shared to other computers** method before you run PPPwnUI.
 
@@ -38,9 +38,9 @@ On your computer:
 
 - Copy `goldhen.bin` from the **USB Drive (GoldHEN_vX.XXX)** directory of this repo to the root directory of an exfat/fat32 USB and insert it into your PS4.
 
-## Usage :
+## Running PPPwnUI
 
-- Launch the app with
+- Launch the app by cd'ing into the repo's directory then run:
 
   **Windows :**
   
