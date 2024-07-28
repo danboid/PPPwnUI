@@ -38,6 +38,8 @@ On your computer:
 
 - Copy `goldhen.bin` from the **USB Drive (GoldHEN_vX.XXX)** directory of this repo to the root directory of an exfat/fat32 USB and insert it into your PS4.
 
+Note that you are only required to have the USB disk storing **goldhen.bin** inserted into your PS4 on the frst time that you successfully run PPPwnUI. **goldhen.bin** is copied onto your PS4 hard drive after being run once so that subsequent uses of PPPwnUI will work without a USB disk.
+
 ## Running PPPwnUI
 
 - Launch the app by cd'ing into the repo's directory then run:
