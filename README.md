@@ -177,6 +177,14 @@ If the exploit fails or the PS4 crashes, you can skip the internet setup and sim
 [+] Done!
 ```
 
+## Installing PS4 .pkg files
+
+Its possible to install pkg files via USB disk but its usually faster and easier to copy pkg files onto your PS4 using a FTP program such as [FileZilla.](https://filezilla-project.org/)
+
+Copy your .pkg files into the **/data/pkg** directory on your PS4. To install them use the **Package Installer** option within the **Debug Settings** menu of the **Goldhen** app on the home screen.
+
+For more detailed instructions see [this guide.](https://consolemods.org/wiki/PS4:How_to_Install_PKG_Files)
+
 ## To do : 
 
 - Rebuild PPPwn_CPP to use Interface Name and not ID  
